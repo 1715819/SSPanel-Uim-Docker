@@ -29,6 +29,15 @@
 
 > 博客文章地址：[在 Debian 9、Centos7、Ubuntu 搭建 SSPanel 魔改版【Docker版一键脚本】](https://baiyue.one/archives/503.html)
 
+## 尝鲜版（内测中）
+
+```
+wget https://raw.githubusercontent.com/Baiyuetribe/SSPanel-Uim-Docker/master/docker-compose.yml
+docker-compose up -d
+```
+> 尝鲜版说明：集成nginx1.7.2+php7.4.0+mysql8.0,并开启gzip、缓存等等。
+
+## 稳定版（适用正式环境）
 ### 方法1：一键脚本（推荐）
 
 集成docker环境和docker-compose环境检测及安装，适配Centos、Debian、Ubuntu等系统。
@@ -113,8 +122,10 @@ exit		#退出
 
 ![Snipaste_2019-07-19_17-17-28.png](https://i.loli.net/2019/07/19/5d318ac1f1d3790132.png)
 
+
 ## 维护日志
 
+- 2019.08.15 新增尝鲜版：集成nginx1.7.2+php7.4.0+mysql8.0,并开启gzip、缓存等等。
 - 2019.07.19 修复数据库问题导致商品名称显示“???”字符问题
 - 2019.06.14 受`yangxuan8282`启发，使用alpine基础镜像重构镜像，体积更小、加入源码数据持久化、宿主机现在可以正常编辑源码
 - 2019.04 使用LNMP编写镜像，可实现无需宝塔快速部署sspanel面板（与宝塔兼容）。
